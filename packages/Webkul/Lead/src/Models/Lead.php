@@ -41,6 +41,8 @@ class Lead extends Model implements LeadContract
         'lead_type_id',
         'lead_pipeline_id',
         'lead_pipeline_stage_id',
+        'user_remark',
+        'handle_at',
     ];
 
     /**
@@ -132,7 +134,7 @@ class Lead extends Model implements LeadContract
     }
 
     /**
-     * Returns the rotten days 
+     * Returns the rotten days
      */
     public function getRottenDaysAttribute()
     {

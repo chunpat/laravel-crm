@@ -128,9 +128,10 @@ class WebFormController extends Controller
         foreach ($tempAttributes as $attribute) {
             if ($attribute->entity_type == 'persons'
                 && (
-                    $attribute->code == 'name'
-                    || $attribute->code == 'emails'
-                    || $attribute->code == 'contact_numbers'
+//                    $attribute->code == 'name'
+//                    || $attribute->code == 'emails'
+//                    ||
+                    $attribute->code == 'contact_numbers'
                 )
             ) {
                 $attributes['default'][] = $attribute;
@@ -308,7 +309,7 @@ class WebFormController extends Controller
 
             $data['lead_pipeline_stage_id'] = $stage->id;
 
-            $data['title'] = request('leads.title') ?: 'Lead From Web Form';
+            $data['title'] = request('leads.title') ?: '网页录单';
 
             $data['lead_value'] = request('leads.lead_value') ?: 0;
 
@@ -323,6 +324,10 @@ class WebFormController extends Controller
             }
 
             $data['lead_type_id'] = request('leads.lead_type_id') ?: $this->typeRepository->first()->id;
+            $data['user_id'] = request('persons.user_id');
+            $data['description'] = request('persons.description');
+            $data['handle_at'] = request('persons.handle_at');
+            $data['user_remark'] = request('persons.user_remark');
 
             $lead = $this->leadRepository->create($data);
 
