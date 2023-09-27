@@ -36,6 +36,7 @@ class Lead extends Model implements LeadContract
         'expected_close_date',
         'closed_at',
         'user_id',
+        'belong_user_id',
         'person_id',
         'lead_source_id',
         'lead_type_id',

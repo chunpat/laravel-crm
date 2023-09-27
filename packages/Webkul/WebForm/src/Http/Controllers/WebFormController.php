@@ -2,6 +2,7 @@
 
 namespace Webkul\WebForm\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
 use Webkul\WebForm\Http\Requests\WebForm;
 use Webkul\Attribute\Repositories\AttributeRepository;
@@ -324,7 +325,8 @@ class WebFormController extends Controller
             }
 
             $data['lead_type_id'] = request('leads.lead_type_id') ?: $this->typeRepository->first()->id;
-            $data['user_id'] = request('persons.user_id');
+            $data['belong_user_id'] = request('persons.user_id');
+            $data['user_id'] = Auth::id();
             $data['description'] = request('persons.description');
             $data['handle_at'] = request('persons.handle_at');
             $data['user_remark'] = request('persons.user_remark');

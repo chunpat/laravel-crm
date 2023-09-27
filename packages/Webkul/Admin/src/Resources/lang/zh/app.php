@@ -1,7 +1,7 @@
 <?php
     return [
         'dashboard' => [
-            'title'             => 'Dashboard',
+            'title'             => '看板',
             'cards'             => 'Cards',
             'column'            => 'Column',
             'done'              => 'Done',
@@ -119,8 +119,8 @@
         ],
 
         'leads' => [
-            'title'                    => 'Leads',
-            'lead'                     => 'Lead',
+            'title'                    => '业务',
+            'lead'                     => '业务',
             'create-title'             => 'Create Lead',
             'edit-title'               => 'Edit Lead',
             'save-btn-title'           => 'Save as Lead',
@@ -830,7 +830,7 @@
             'locale'              => 'Locale',
             'en'                  => 'English',
             'tr'                  => 'Türkçe',
-            'ar'                  => 'Arabic',          
+            'ar'                  => 'Arabic',
             'add-as'              => 'Add as new',
             'no-records-found'    => 'No Records Found',
             'start-typing'        => 'Start typing to search records',
@@ -845,8 +845,8 @@
             'internal-server-error' => '500 Internal Server Error',
             'something-went-wrong'  => 'Something went wrong, please try again later.',
             'delete-confirm'        => 'Do you really want to perform this action?',
-            'system_attribute'      => 'System', 
-            'custom_attribute'      => 'Custom', 
+            'system_attribute'      => 'System',
+            'custom_attribute'      => 'Custom',
         ],
 
         'user' => [
